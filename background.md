@@ -11,27 +11,27 @@ $$ \frac{\partial \rho}{\partial t}+\nabla.(\rho\mathbf{u})=0 $$
 In this equation the vector $\rho\mathbf{u}=\mathbf{j}$ is called the $\textbf{momentum density}$ or $\textbf{mass flux density}$.
 
 ## Conservation of Momentum
-### Euler Equation
+### Euler Equations
 
-The Euler equation describes the conservation of momentum in an ideal fluid and is expressed as follows:
+The Euler equations describes the conservation of momentum in an ideal fluid and are expressed as follows:
 
 $$ \frac{\partial(\rho\mathbf{u})}{\partial t}+\nabla.(\rho\mathbf{uu})=-\nabla p + \mathbf{F} $$
 
 where $\textbf{F}$ is the external body force.
 
-This equation can be also written in a more general form:
+These equations can be also written in a more general form:
 
 $$ \frac{\partial(\rho\mathbf{u})}{\partial t}+\nabla.\Pi=\textbf{F} $$
 
-which is called the $\textbf{Cauchy momentum equation}$, where the $\textbf{momentum flux}$ density tensor is defined as:
+which are called the $\textbf{Cauchy momentum equations}$, where the $\textbf{momentum flux}$ density tensor is defined as:
 
 $$ \Pi_{\alpha\beta}=\rho u_{\alpha}u_{\beta}-\sigma_{\alpha\beta} $$
 
-In this equation $\sigma_{\alpha\beta}$ is the $\textbf{stress tensor}$ which corresponds to the non-direct momentum transfer of the moving fluid.
+In these equations $\sigma_{\alpha\beta}$ is the $\textbf{stress tensor}$ which corresponds to the non-direct momentum transfer of the moving fluid.
 
-### Navier-Stokes Equation
+### Navier-Stokes Equations
 
-Since the Euler equation describes the behavior of ideal fluids, it does not account for energy loss. In real fluids, the momentum will dissipate in tranfer from one fluid element to another, thus, a viscosity term in needed. To this end, the $\textbf{viscous stress tensor $\sigma'$}$ can be defined as follows:
+Since the Euler equations describe the behavior of ideal fluids, it does not account for energy loss. In real fluids, the momentum will dissipate in tranfer from one fluid element to another, thus, a viscosity term in needed. To this end, the $\textbf{viscous stress tensor $\sigma'$}$ can be defined as follows:
 
 $$ \sigma'_{\alpha\beta}=\eta(\frac{\partial u_{\alpha}}{\partial x_{\beta}}+\frac{\partial u_{\beta}}{\partial x_{\alpha}})+\zeta\delta_{\alpha\beta}\frac{\partial u_{\gamma}}{\partial x_{\gamma}}$$
 
@@ -41,17 +41,17 @@ The total stress tensor can be now written as the sum of the pressure and viscos
 
 $$ \sigma_{\alpha\beta}=\sigma'_{\alpha\beta}-p\delta_{\alpha\beta} $$
 
-Substituting the last two equations in the Cauchy momentum equation, which is the generalized Euler equation, results in the Navier-Stokes equation:
+Substituting the last two equations in the Cauchy momentum equations, which is the generalized Euler equations, results in the Navier-Stokes equations:
 
 $$ \frac{\partial(\rho u_{\alpha})}{\partial t}+\frac{\partial(\rho u_{\alpha}u_{\beta})}{\partial x_{\beta}}=-\frac{\partial p}{\partial x_{\alpha}}+\frac{\partial}{\partial x_{\beta}}[\eta(\frac{\partial u_{\alpha}}{\partial x_{\beta}}+\frac{\partial u_{\beta}}{\partial x_{\alpha}})+(\eta_B-\frac{2\eta}{3})\frac{\partial u_{\gamma}}{\partial x_{\gamma}}\delta_{\alpha\beta}]+F_{\alpha} $$ 
 
 where $\eta_B = 2\eta/3 +\zeta$ is referred to as the bulk viscosity.
 
-Assuming the viscosities to be constant and the fluid to be incompressible, the well-know incompressible Navier-Stokoes equation can be derived as:
+Assuming the viscosities to be constant and the fluid to be incompressible, the well-know incompressible Navier-Stokoes equations can be derived as:
 
 $$ \rho \frac{Du}{Dt}=-\nabla p+\eta\Delta u+ F $$ 
 
-where $\frac{D}{Dt}$ is the material derivative and $\delta$ is the Laplace operator.
+where $\frac{D}{Dt}$ is the material derivative and $\Delta$ is the Laplace operator.
 
 ## State Principle
 ### Equation of State
@@ -72,4 +72,4 @@ $$ p=\rho RT_0 $$
 
 <br/><br/>
 
-Using five independent equations that describe the behavior of the fluid, the five unknowns, $\rho$, $u_x, u_y, u_z$, and $p$ can be evaluated. These five equations include: the continuity equation, either Euler or Navier-Stokes equatioin in 3 directions, and one state equation. 
+Using five independent equations that describe the behavior of the fluid, the five unknowns, $\rho$, $u_x, u_y, u_z$, and $p$ can be evaluated. These five equations include: the continuity equation, either Euler or Navier-Stokes equations (3 equations dues to the 3 directions), and a state equation. 
