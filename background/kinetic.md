@@ -23,11 +23,11 @@ $$ p=\rho RT=\frac{2}{3}\rho e=\frac{1}{3}\int{|\boldsymbol{v}|^2f(\boldsymbol{x
 
 When a gas has been left alone for sufficiently long, the particle collisions tend to even out the angular distribution of particle velocities around the mean velocity $\boldsymbol{u}$, so it may be assumed that the distribution function will reach an equilibrium distribution $f^{eq}(\boldsymbol{x},\boldsymbol{\xi},t)$ which is isotropic in velocity space around $\boldsymbol{\xi}=\boldsymbol{u}$. In a reference frame moving with speed $\boldsymbol{u}$, the equilibrium distribution can be derived as:
 
-$$ f^{eq}(\boldsymbol{x},|\boldsymbol{v}|,t)=\rho(\frac{3}{4\pi e})^{3/2} e^{-3|\boldsymbol{v}|^2/(4e)}  $$ 
+$$ f^{eq}(\boldsymbol{x},|\boldsymbol{v}|,t)=\rho(\frac{3}{4\pi e})^{3/2} \;\text{e}^{-3|\boldsymbol{v}|^2/(4e)}  $$ 
 
 which is often called the Maxwell-Boltzmann distribution.
 
-## The Boltzmann Equation
+## The Boltzmann Equation and the Collision Operator
 
 To study the evolution of the distribution function with time, the total derivative of this function with respect to time can be taken as follows:
 
@@ -35,8 +35,16 @@ $$ \Omega(f)=\frac{df}{dt}=\frac{\partial f}{\partial t}+\xi_{\beta}\frac{\parti
 
 The equation above is called the Boltzmann equation, and $\Omega(f)$ is called the collision operator, which represents the local redistribution of $f$ due to collisions.
 
-Boltzmann's original operator is very complicated. Bhatnagar, Gross and Krook have introduced a much simpler collision operator, called the BKG operator, as shown below:
+Boltzmann's original operator is of the form of a complicated and cumbersome double integral over velocity space. It considers all the possible outcomes of two-particle collisions for any choice of intermolecular forces. Bhatnagar, Gross and Krook have introduced a much simpler collision operator, called the BKG operator, as shown below:
 
 $$ \Omega(f)=-\frac{1}{\tau}(f-f^{eq}) $$
 
-where $\tau$ is the relaxation time which is a function of transport coeeficients such as viscosity and heat diffusivity. This equation satisfies the conseravtion of mass and momentum, and ensures that the distribution function $f$ locally evolves towards it equilibrium $f^{eq}$, but it is not as exact as Boltzmann's original operator.
+where $\tau$ is the relaxation time which is a function of transport coeficients such as viscosity and heat diffusivity. This equation satisfies the conseravtion of mass and momentum, and ensures that the distribution function $f$ locally evolves towards it equilibrium $f^{eq}$, but it is not as exact as Boltzmann's original operator.
+
+All the macroscopic equations of fluid mechanics can be found from the Boltzmann's equation by taking its moments.
+
+$$ \textbf{Conservation of Mass:} \int{\Omega(f)d^3\xi}=0 $$
+$$ \textbf{Conservation of Momentum:} \int{\boldsymbol{\xi}\Omega(f)d^3\xi}=\boldsymbol{0} $$
+$$ \textbf{Conservation of Internal Energy:} \int{|\boldsymbol{\xi}|^2\Omega(f)d^3\xi}=0 $$
+
+

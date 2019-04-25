@@ -1,7 +1,7 @@
 # Continuum Theory
 
 In this section the most commonly used equations to describe the behavior of a fluid in $\textit{macroscale}$ fluid mechanics is provided.
-In these equations, the unknows include density, $\rho$, velocity vector, $\boldsymbol{u}=[u_x,u_y,u_x]$, and the pressure, $p$.
+In these equations, the unknows include density, $\rho$, velocity vector, $\boldsymbol{u}=[u_x,u_y,u_x]$, and pressure, $p$.
 
 ## Conservation of Mass
 ### Continuity Equation
